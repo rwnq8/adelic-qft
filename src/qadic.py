@@ -61,7 +61,7 @@ class QadicNumber:
         self._is_prime = False
         if isinstance(self.q_val, (int, float)) and self.q_val == int(self.q_val):
             q_int = int(self.q_val)
-            if q_int >= 2 and self._is_integer_prime(q_int):
+            if q_int >= 2 and self.is_prime(q_int):
                 self._is_prime = True
                 self._padic = PadicNumber(q_int, self.rational)
 
@@ -79,15 +79,7 @@ class QadicNumber:
             self._v = 0
 
     @staticmethod
-    def _is_integer_prime(n):
-        """Check if n is prime."""
-        if n < 2:
-            return False
-        for d in range(2, int(n ** 0.5) + 1):
-            if n % d == 0:
-                return False
-        return True
-
+    
     def _compute_integer_q_valuation(self, q):
         """Compute v_q(r) for integer q (possibly composite).
 

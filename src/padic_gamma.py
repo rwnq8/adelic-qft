@@ -15,6 +15,7 @@ Properties:
 """
 
 import math
+from primes import primes_up_to
 from fractions import Fraction
 
 

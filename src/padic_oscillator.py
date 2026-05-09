@@ -36,7 +36,7 @@ def Z_inf(beta, omega=1.0):
     Returns:
         float: Partition function value.
     """
-        if beta <= 0:
+    if beta <= 0:
         raise ValueError(f'beta must be > 0, got {beta}')
     return math.sqrt(math.pi / (beta * omega))
 
@@ -73,10 +73,10 @@ def Z_p(beta, p, omega_p=1.0, max_terms=100, tol=1e-15):
         tol (float): Stop when contribution < tol.
     Returns:
         float: Z_p(beta, omega_p)
-    """"
+    """
     if beta <= 0:
         raise ValueError(f'beta must be > 0, got {beta}')
-        factor = 1.0 - 1.0 / p
+    factor = 1.0 - 1.0 / p
     total = 0.0
     terms = 0
     
@@ -151,7 +151,7 @@ def Z_q(beta, q, omega_q=1.0, max_terms=100, tol=1e-15):
     
     if beta <= 0:
         raise ValueError(f'beta must be > 0, got {beta}')
-        factor = 1.0 - 1.0 / q
+    factor = 1.0 - 1.0 / q
     total = 0.0
     
     for n in range(0, -max_terms, -1):

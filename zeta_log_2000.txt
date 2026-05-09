@@ -1,0 +1,2 @@
+Starting zeta computation: N=2000, batch=500
+Fresh start

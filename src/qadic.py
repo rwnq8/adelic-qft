@@ -16,6 +16,7 @@ from math import isclose
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from padic import PadicNumber
+from primes import is_prime
 
 
 class QadicNumber:
@@ -61,7 +62,7 @@ class QadicNumber:
         self._is_prime = False
         if isinstance(self.q_val, (int, float)) and self.q_val == int(self.q_val):
             q_int = int(self.q_val)
-            if q_int >= 2 and self.is_prime(q_int):
+            if q_int >= 2 and is_prime(q_int):
                 self._is_prime = True
                 self._padic = PadicNumber(q_int, self.rational)
 
@@ -78,8 +79,6 @@ class QadicNumber:
             # This is because transcendental/fractional "bases" don't divide rationals
             self._v = 0
 
-    @staticmethod
-    
     def _compute_integer_q_valuation(self, q):
         """Compute v_q(r) for integer q (possibly composite).
 

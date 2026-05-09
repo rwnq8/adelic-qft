@@ -2,7 +2,7 @@
 
 **Investigating whether the adelic completion of $\mathbb{Q}$ forces dimensionless physical constants to specific number-theoretic values.**
 
-**Status: Phase 1 Complete — see [4.1.md](4.1.md) for the Full Narrative Report (recommended) or [4.0.md](4.0.md) for the Structured Capstone Report.**
+**Status: Phase 1 Complete — see [5.0.md](5.0.md) for the Phase 2 Research Plan (next steps). Read [4.1.md](4.1.md) for the Full Narrative Report or [4.0.md](4.0.md) for the Structured Capstone.**
 
 ---
 
